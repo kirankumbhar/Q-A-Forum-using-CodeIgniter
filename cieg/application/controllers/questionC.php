@@ -1,6 +1,7 @@
 <?php
 class QuestionC extends CI_Controller{
   public function index(){
+
     echo "question page";
   }
   public function display($id){
@@ -19,6 +20,23 @@ class QuestionC extends CI_Controller{
     //echo "page to add your question";
     $this->load->view('addquestionV');
 
+  }
+
+  public function add(){
+    $question=$_POST['question'];
+    $username=$this->session->userdata('username');
+    $this->load->model('questionM');
+    $result=$this->questionM->add_question($question,$username);
+
+    if($result==1){
+      echo "<script>
+        alert('succesfully added question');
+      </script>";
+      return redirect('dashboardC');
+    }
+    else{
+      echo "<script>alert ('error');</script>";
+    }
   }
 }
 ?>

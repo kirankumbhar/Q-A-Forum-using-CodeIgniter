@@ -4,7 +4,7 @@ class AddanswerC extends CI_Controller{
 
   }
   public function add(){
-   $this->load->view('loginV');
+   
     $username=$this->session->userdata("username");
     $qid=$this->input->post('id');
     $answer=$this->input->post('txt');
@@ -16,11 +16,12 @@ class AddanswerC extends CI_Controller{
     $show=$this->db->conn_id->query("Select * from answer where username= '".$username ."' and quesid='".$qid."'");
     while($row=$show->fetch(PDO::FETCH_ASSOC)){
 	     if($show->rowCount()>0){
-	        echo $row['username']."<br>";
-	         echo nl2br($row['answer'])."<br><br>";
+	        $result=$row['username']."<br>".nl2br($row['answer'])."<br><br>";
+          
         }
     }
-    echo "alert from controller";
+    return $result;
+    //echo "alert from controller";
   }
 }
  ?>

@@ -37,8 +37,8 @@ class LoginC extends CI_Controller{
 
   public function register(){
     $this->load->view('registerV');
-    $this->form_validation->set_rules('firstname','First Name','alpha|min_length[5]');
-    $this->form_validation->set_rules('lastname','Last Name','alpha|min_length[5]');
+    $this->form_validation->set_rules('firstname','First Name','alpha|min_length[4]');
+    $this->form_validation->set_rules('lastname','Last Name','alpha|min_length[4]');
     $this->form_validation->set_rules('email','Email','trim|valid_email');
     $this->form_validation->set_rules('username','Username','is_unique[user.username]|alpha|min_length[2]');
     $this->form_validation->set_rules('password','Password','numeric|min_length[2]');

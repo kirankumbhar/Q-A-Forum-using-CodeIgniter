@@ -1,18 +1,7 @@
-#heading{
-
-
-	color:black;
-	position:relative;
-	width:65%;
-	height:15%;
-	text-align: center;
-    font-size:30px;
-	border-style: solid;
-	border-width: 5px;
-	background-color: white;
-	left:5%;
+#reg{
+	margin: auto;
+    width: 65%;
 }
-
 #signup,#login,#logout{
 	width: 150px;
 	height: 50px;
@@ -32,20 +21,8 @@
 	display: inline-block;
 	font-size: 25px;
 }
-#ans{
-    width: 8%;
-	height: 5%;
-	background-color: #AEABAB;
-	border-radius:2px;
-	display: inline-block;
-	position:relative;
-	font-size: 25px;
-	left:5%;
-}
-#addqform{
-	position:relative;
-	left:5%;
-}
+
+
 #addquestion{
 	width: 150px;
 	height: 70px;
@@ -75,45 +52,31 @@
 
 #question{
 
-	width: 74%;
+	
 	position:relative;
-	left: 5%;
-	padding-top: 20px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-left: 80px;
-	font-size: 25px;
-	background-color:#AEABAB;
+	
+	padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+	font-size: 20px;
+	background-color:#8492a0;
 }
-#anspost{
-	width: 150px;
-	height: 50px;
-	background-color: #AEABAB;
-	border-radius:2px;
-	display: inline-block;
-	float:left;
-	font-size: 25px;
-	position:absolute;
-	left: 25px;
-}
+
 #answer{
 	position:relative;
-	height: 100px;
-	width: 1500px;
+	
 	display:none;
-	left: 5%;
+	
 }
 
 #allanswers{
 
 	border-bottom-width:2px;
-	width:80%;
-	left: 5%;
-	position:absolute;
-	padding-top: 20px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-left: 80px;
+	padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 	font-size:20px;
 
 
@@ -126,22 +89,25 @@ a{
 }
 
 #qdisplay{
-	background-color:#AEABAB;
-	width: 75%;
+	background-color:#8492a0;
+	padding-right: 10px;
+	padding-left: 10px;
 	position:relative;
-	left: 5%;
-	right: 0px;
 	padding-top: 20px;
-    padding-right: 50px;
     padding-bottom: 20px;
-    padding-left: 80px;
-	font-size:20px;
+	font-size:15px;
 
+}
+#questiontext{
+	
+	left:10px;
+	right:10px;
 }
 #askedby{
 	float:left;
 	position :relative;
 	right:0px;
+	left: 10px;
 }
 hr{
 	position :relative;
@@ -151,10 +117,15 @@ hr{
 	border-width:0px;
 }
 #afterans{
-	position :relative;
+	
 	left: 0px;
 	right: 0px;
-	width: 100%;
-	border-width:1px;
+	
+	border-width:4px;
 
+}
+
+.votecount{
+	font-size: 25px;
+	padding-left: 55px;
 }

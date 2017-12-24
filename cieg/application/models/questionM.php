@@ -31,5 +31,28 @@
     $results=$stmt3->fetchAll(PDO::FETCH_ASSOC);
     return array('ansid'=>$ansid,'results'=>$results);
   }
+
+  public function add_question($question,$username){
+    $userid=0;
+    $stmt4=$this->db->conn_id->query("select * from user where username='".$username."'");
+    while($row=$stmt4->fetch(PDO::FETCH_ASSOC)){
+      if($stmt4->rowCount()>0){
+        $userid=$row['uid'];
+      }
+    }
+    $stmt5=$this->db->conn_id->prepare("insert into question(usrid,question,usrname) values(?,?,?)");
+    $stmt5->bindValue(1,$userid);
+    $stmt5->bindValue(2,$question);
+    $stmt5->bindValue(3,$username);
+    if($stmt5->execute())
+    {
+      $result=1;
+      
+    }
+    else{
+      $result=0;
+    }
+    return $result;
+  }
 }
 ?>
