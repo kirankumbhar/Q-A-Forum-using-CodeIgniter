@@ -9,7 +9,6 @@
       $this->load->model('upvoteM');
       $votecount=$this->upvoteM->get_votecount($id);
       //echo $votecount;
-      
     }
   }
  ?>

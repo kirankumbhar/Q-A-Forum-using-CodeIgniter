@@ -41,7 +41,7 @@ $(document).ready(function(){
 				dataType:"text",
 				success:function(result){
 					if(!$.trim(result)){
-						alert("You are already voted for this answer !");
+						alert("Your vote is not counted . Either you are already voted or not logged in!");
 					}
 					else{
 						$("#"+id).text(result);
@@ -59,7 +59,7 @@ $(document).ready(function(){
 				data:{id},
 				success:function(result){
 					if(!$.trim(result)){
-						alert("You are already voted for this answer !");
+						alert("Your vote is not counted . Either you are already voted or not logged in!");
 
 					}
 					else{
