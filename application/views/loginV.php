@@ -18,22 +18,26 @@
   </div>
 </nav>
 <div class="container">
-    <h1 align="center">Login</h1>
-
+    <h1 >Login</h1>
+    <div class="row">
       <?php echo form_open('loginC/login'); ?>
+      <div class="col-md">
     <div class="form-group">
       <tr>
         <label>Username:</label>
         <div class="form-group"><?php echo form_input(['name'=>'username','placeholder'=>'Enter username','class'=>'form-control','required'=>'true','value'=>set_value('username')]);  ?></div>
       </div>
+    </div>
+    <div class="col-md">
       <div class="form-group">
         <label>Password:</label>
         <div><?php echo form_password(['name'=>'password','class'=>'form-control','placeholder'=>'Enter password','required'=>'true']); ?>
           
         </div>
-      
     </div>
-    <div align="center">
+  </div>
+  </div>
+    <div >
       <br/>
     <?php echo form_submit(['name'=>'submit','class'=>'btn btn-outline-secondary','value'=>'Login']); ?>
     <?php echo form_reset(['name'=>'reset','class'=>'btn btn-outline-secondary','value'=>'Reset']); ?>
