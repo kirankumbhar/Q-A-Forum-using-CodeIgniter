@@ -57,6 +57,7 @@ $(document).ready(function(){
 				method: "post",
 				cache:false,
 				data:{id},
+				dataType:"text",
 				success:function(result){
 					if(!$.trim(result)){
 						alert(" Sorry! Your vote is not counted . Either you are already voted or not logged in!");

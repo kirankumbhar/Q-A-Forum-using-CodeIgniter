@@ -57,11 +57,17 @@ class LoginC extends CI_Controller{
         if($this->loginM->register_user($firstname,$lastname,$email,$username,$password)){
           echo "<script>alert('register successful');window.location.href='index';</script>";
         }
+        else{
+          echo "<script>alert('something went wrong');</script>";
+        }
 
       }
       else{
         echo "<script>alert('password does not match');</script>";
       }
+    }
+    else{
+      echo validation_errors();
     }
   }
 

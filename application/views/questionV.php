@@ -6,13 +6,13 @@
       </script>
   </head>
   <body background="<?php echo base_url('images/background.jpg') ?>" >
-    
+
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark p-3">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand " href="<?php echo site_url("dashboardC")?>"><h2> QA Forum</h2></a>
     </div>
-    
+
     <ul class="nav navbar-nav navbar-right">
       <?php
     if($this->session->userdata('username')){
@@ -69,16 +69,16 @@
 
 					echo nl2br($result['answer'])."<br><br>";
 					?>
-          
+
           <div class="votecount" id="<?php echo $result['ansid']; ?>"><?php echo $result['votes']; ?></div>
-          <button name="up" class=' rounded votebtn' id="<?php echo $result['ansid']; ?>"><img style='float:right' width="40" height="40" src="<?php echo base_url('images/up.png') ?>"/></button>
-          <button name="down" class='rounded votebtn' id="<?php echo $result['ansid'];?>"><img style='float:right' width="40" height="40" src="<?php echo base_url('images/down.png') ?>"/></button>
+          <button name="up" class=' votebtn btn btn-secondary' id="<?php echo $result['ansid']; ?>"><img style='float:right' width="40" height="40" src="<?php echo base_url('images/up.png') ?>"/></button>
+          <button name="down" class='votebtn btn btn-secondary' id="<?php echo $result['ansid'];?>"><img style='float:right' width="40" height="40" src="<?php echo base_url('images/down.png') ?>"/></button>
           </div>
 					<hr id='afterans'/>
           <?php
       }?>
       </div>
-      
+
 <?php } ?>
 </div>
 <script type="text/javascript" src="<?php echo base_url();?>js/jquery.js" ></script>
