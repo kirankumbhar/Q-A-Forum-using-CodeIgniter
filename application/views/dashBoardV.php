@@ -26,8 +26,8 @@
     }
     else{
       ?>
-      <li><a href="<?php echo site_url("loginC/register")?>"><button type="button" class="btn btn-secondary">Sign Up</button></a></li>&nbsp
-      <li><a href="<?php echo site_url("loginC")?>"><button type="button" class="btn btn-secondary">Log In</button></a></li>
+      <li><a href="<?php echo site_url("loginC/register")?>"><button type="button" class="votebtn btn btn-secondary">Sign Up</button></a></li>&nbsp
+      <li><a href="<?php echo site_url("loginC")?>"><button type="button" class="votebtn btn btn-secondary">Log In</button></a></li>
        <?php
     }?>
     </ul>
